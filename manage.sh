@@ -15,6 +15,7 @@ function create_bucket() {
 
 function deploy_s3() {
   aws s3 sync $directory/public/ s3://keighty.wordplay.com --acl public-read
+  echo 'View the site at http://keighty.wordplay.com.s3-website-us-east-1.amazonaws.com'
 }
 
 action=${1:-"help"}
