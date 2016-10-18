@@ -32,4 +32,4 @@ const getRandomIntInclusive = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-getWords(1000)
+getWords(1000, './bin/20k.txt')
