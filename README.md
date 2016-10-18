@@ -6,7 +6,7 @@ A stateless single page application to leverage the technique of combining words
 Create a bucket
 
 ```
-./sspa create_bucket keighty.wordplay.com
+$ ./manage.sh create keighty.wordplay.com
 ```
 
 ### Production
@@ -15,6 +15,10 @@ Create a bucket
 ### Deployment
 ```
 $ aws s3 sync public/ s3://keighty.wordplay.com --acl public-read
+
+// or
+
+$ ./manage.sh deploy keighty.wordplay.com
 ```
 
 HeroImage.jpg is licensed from popularwoodworking.com under the Creative Commons Attribution License (CC BY 3.0 US).
