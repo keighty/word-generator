@@ -16,3 +16,16 @@ function deploy() {
   local bucket_uri="s3://$1"
   aws s3 sync public/ $bucket_uri --acl public-read
 }
+
+action=${1:-"help"}
+
+cd $root_dir
+
+case "$action" in
+  deploy)
+    deploy ${2}
+    ;;
+  create)
+    create ${2}
+    ;;
+esac
