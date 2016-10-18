@@ -9,83 +9,19 @@
     <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
     <script src='/vendor.js'></script>
     <script src='/app.js'></script>
-    <style type="text/css" media="all">
-      body { margin-top: 60px; }
-      .templates { display: none; }
-      .nav-container {
-        padding-left: 40px;
-        background: #666;
-      }
-      .nav-container a { color: white;}
-      .fixed-top {
-        position: fixed;
-        top: 0px;
-        z-index: 1024;
-      }
-      .inline-list { margin-bottom: 0px; }
-      .inline-list li {
-        display: inline;
-        margin: 0 20px 0 0;
-      }
-      .no-select {
-        user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
-      }
-      .hover-links a { text-decoration: none; }
-      .hover-links a:hover { text-decoration: underline; }
-      .text-lg { font-size: 32px; }
-    </style>
+    <link rel="stylesheet" href="./stylesheets/index.css" media="screen">
   </head>
   <body>
     <div class='markup'>
       <!-- nav container -->
       <div class='nav-container no-select fixed-top u-full-width'>
         <ul class='inline-list hover-links nav-list six columns'>
-          <li><a href="#" class='text-lg'>LearnJS</a></li>
-          <li><a href="#problem-1">Start</a></li>
+          <li><a href="#" class='text-lg'>Idea generator</a></li>
         </ul>
       </div>
-
       <div class='view-container container'>
-      </div>
-      <div class='templates'>
-
-        <!-- landing view template -->
-        <div class='landing-view'>
-          <div class='row'>
-            <div class='one-half column'>
-              <h3>Learn JavaScript, one puzzle at a time.</h3>
-              <a href='#problem-1' class='button button-primary'>Start Now!</a>
-            </div>
-            <div class='one-half column'>
-              <img src="/images/heroImage.jpg" />
-            </div>
-          </div>
-        </div>
-
-        <!-- problem view template -->
-        <div class='problem-view'>
-          <h3 class='title'></h3>
-          <p data-name='description'></p>
-          <pre><code data-name='code'></code></pre>
-          <form>
-            <textarea class='answer u-full-width'></textarea>
-            <div>
-              <button class='check-btn button-primary'>Check answer</button>
-              <div class='result'></div>
-            </div>
-          </form>
-        </div>
-
-        <!-- correct flash and next problem template -->
-        <div class='correct-flash'><span>Correct!</span> <a href="">Next problem</a></div>
-
+        <button onClick="javascript:getWords()">Start generating</button>
       </div>
     </div>
-    <script type="text/javascript">
-      $(window).ready(learnjs.appOnReady)
-    </script>
   </body>
 </html>
