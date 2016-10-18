@@ -14,7 +14,7 @@ Create a bucket
 
 ### Deployment
 ```
-$ ./sspa deploy_bucket keighty.wordplay.com
+$ aws s3 sync public/ s3://keighty.wordplay.com --acl public-read
 ```
 
 HeroImage.jpg is licensed from popularwoodworking.com under the Creative Commons Attribution License (CC BY 3.0 US).
