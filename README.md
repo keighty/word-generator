@@ -1,6 +1,6 @@
 ## WordPlay
 
-A stateless single page application to leverage the technique of combining words to generate new ideas.
+A stateless single page application for leveraging the technique of combining words to generate new ideas.
 
 ## Development
 Create a bucket
@@ -9,15 +9,17 @@ Create a bucket
 $ ./manage.sh create keighty.wordplay.com
 ```
 
+Create a new wordList
+
+```
+$ node --use-strict bin/word-generator.js
+```
+
 ### Production
 [keighty.wordplay.com](http://keighty.wordplay.com.s3-website-us-east-1.amazonaws.com)
 
 ### Deployment
 ```
-$ aws s3 sync public/ s3://keighty.wordplay.com --acl public-read
-
-// or
-
 $ ./manage.sh deploy keighty.wordplay.com
 ```
 
