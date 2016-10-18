@@ -19,7 +19,7 @@ const getWords = (qty, file) => {
       wordList.push(dictionary[getRandomIntInclusive(0, dictionary.length - 1)])
     }
 
-    fs.writeFile('public/data/words.txt', wordList, err => {
+    fs.writeFile('bin/chosen-words.txt', wordList, err => {
       if (err) console.log(`Error: ${err.message}`)
       else console.log('success')
     })
