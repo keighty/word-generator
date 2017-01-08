@@ -33,3 +33,11 @@ const getRandomIntInclusive = (min, max) => {
 }
 
 getWords(1000, './bin/20k.txt')
+
+// http://www.enchantedlearning.com/wordlist/...
+function scrapeWords() {
+  let words = Array.from(document.querySelectorAll('td > font'))
+    .map(tag => tag.textContent.trim().replace(/\r|\n/g, ' '))
+    .join(' ')
+    console.log(words)
+}
