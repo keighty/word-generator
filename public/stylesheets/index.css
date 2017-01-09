@@ -1,4 +1,7 @@
-body { margin-top: 60px; }
+body {
+  margin-top: 60px;
+  background: url("../images/logo_x_pattern.png")
+}
 .nav-container {
   padding-left: 40px;
   background: #666;

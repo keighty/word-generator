@@ -15,6 +15,9 @@ Create a new wordList
 $ node --use-strict bin/word-generator.js
 ```
 
+Modify wordList using [this gist](https://gist.github.com/keighty/2ae5c9e5c325d7f9b8d80425e59520b7#file-noun-verbs-json)
+(served via [rawgit](https://rawgit.com/))
+
 ### Production
 [keighty.wordplay.com](http://keighty.wordplay.com.s3-website-us-east-1.amazonaws.com)
 
