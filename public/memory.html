@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>WordPlay</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'>
+  <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+  <script src='./javascripts/vendor.js'></script>
+  <link rel="stylesheet" href="./stylesheets/index.css" media="screen">
+  <link rel="stylesheet" href="./stylesheets/memory.css" media="screen">
+</head>
+
+<body>
+    <!-- nav container -->
+    <div class='nav-container no-select fixed-top u-full-width'>
+      <ul class='inline-list hover-links nav-list six columns'>
+        <li><a href="./index.html" class='text-lg'>WordPlay</a></li>
+        <li><a href="./memory.html">Memory</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h3> Gathering fieldstones from memory </h3>
+      <p>
+        Use ths exercise when you are running out of ideas to write about.
+      </p>
+      <hr />
+      <div class="markup"> </div>
+
+      <hr />
+      <p><a href="https://www.amazon.com/Weinberg-Writing-Fieldstone-Gerald-M/dp/093263365X">
+        Adapted from "Weinberg on Writing: The FieldStone Method"
+      </a></p>
+    </div>
+
+  </div>
+
+  <script charset="utf-8">
+    const container = document.querySelector('.markup')
+    const triggers = [
+      "think of /the time/",
+      "think of /this place/",
+      "hear",
+      "see",
+      "feel",
+      "touch",
+      "taste",
+      "smell",
+      "think of /some person/",
+      "do /some action/",
+    ]
+
+    function buildHtml(text) {
+      return `
+      <div class='row'>
+        <div class="four columns">
+          <p class="starter">
+            Whenever I ${text}
+          </p>
+        </div>
+        <div class="eight columns">
+          <textarea class="u-full-width" name="time"></textarea>
+        </div>
+      </div>
+      `
+    }
+
+    container.innerHTML = triggers
+        .map(trigger => buildHtml(trigger))
+        .join('')
+
+  </script>
+</body>
+
+</html>
