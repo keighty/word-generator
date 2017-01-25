@@ -20,6 +20,15 @@ const opt = {
   cache: 'default'
 }
 
-fetch(dataURL, opt)
-  .then(response => response.json())
-  .then(data => wordList = data)
+if (typeof fetch !== 'undefined') {
+  fetch(dataURL, opt)
+    .then(response => response.json())
+    .then(data => wordList = data)
+} else {
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', dataURL)
+  xhr.addEventListener('load', data => {
+    wordList = JSON.parse(xhr.responseText)
+  })
+  xhr.send()
+}
